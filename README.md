@@ -1,1 +1,1 @@
-# KriaSOM
+# KriaPYNQ
