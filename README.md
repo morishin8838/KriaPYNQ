@@ -1,1 +1,1 @@
-# KriaPYNQ
+# KriaPYNQ For Ubuntu
