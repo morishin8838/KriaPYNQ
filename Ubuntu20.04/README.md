@@ -1,13 +1,16 @@
 # イメージ構築手順 KriaPYNQ For Ubuntu on Xilinx
 
-## ツールバージョン
+## ホスト開発環境
+* Ubuntu20.04
+
+## ターゲットツールバージョン
 * Ubuntu20.04
 * PYNQ2.7(KriaPYNQ)
-
 
 ## :warning: Ubuntu自体をupgradeしない前提のSDカードの作成方法です。
 * ubuntuをアップグレードを試みると、confrict発生します
 * 理由はよくわかりません。
+* ホストPC(Ubuntu or Windows等）のシリアルコンソールをKriaに接続し、作業を行ってください。
 
 ## 手順
 1. Xilinx FOR ubuntu OS作成 SDカード作成
