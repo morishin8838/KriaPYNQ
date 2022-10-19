@@ -43,8 +43,8 @@
         * prop=run.impl_1.strategy=Performance_Explore
     
 2. ビルド実行
-| $VERSION=2021.1
-| $source /tools/Xilinx/Vitis/$VERSION/settings64.sh
-| $source /opt/xilinx/xrt/$VERSION/setup.sh
-| $make BOARD=NKV VITIS_PLATFORM=<path xpfm>/xxxxx.xpfm
+$VERSION=2021.1   
+$source /tools/Xilinx/Vitis/$VERSION/settings64.sh  
+$source /opt/xilinx/xrt/$VERSION/setup.sh  
+$make BOARD=NKV VITIS_PLATFORM=<path xpfm>/xxxxx.xpfm  
 
