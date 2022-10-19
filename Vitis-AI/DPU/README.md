@@ -19,11 +19,11 @@
         * clk_out1:Enabledチェック、id=4     
         
 4. bitstream生成
-5. xsaファイル生成
+5. xsaファイルをエクスポート生成
 
 ## プラットフォーム作成
 1. vitis起動し、メニューからプラットフォーム選択
-2. xsaファイルを選択し、linuxを選択し、bootはチェック外す。ワーニングは無視して、終了
+2. エクスポートしたxsaファイルを選択し、linuxを選択し、bootはチェック外す。ワーニングは無視して、終了
 3. トンカチボタンでbuildする。
 
 ## ビルド
@@ -34,8 +34,8 @@
         * `define def_UBANK_WGT_N          15
         * `define def_UBANK_BIAS           1
     2. prj_config
-        * freqHz=300000000:DPUCZDX8G_1.aclk
-        * freqHz=600000000:DPUCZDX8G_1.ap_clk_2
+        * freqHz=200000000:DPUCZDX8G_1.aclk
+        * freqHz=400000000:DPUCZDX8G_1.ap_clk_2
         * id=2:DPUCZDX8G_1.aclk
         * id=4:DPUCZDX8G_1.ap_clk_2
         * sp=DPUCZDX8G_1.M_AXI_GP0:HP1
