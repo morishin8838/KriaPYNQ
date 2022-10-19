@@ -42,7 +42,7 @@
         * sp=DPUCZDX8G_1.M_AXI_HP2:HPC1
         * prop=run.impl_1.strategy=Performance_Explore
     
-2. ビルド実行
+2. ビルド実行  
 $VERSION=2021.1   
 $source /tools/Xilinx/Vitis/$VERSION/settings64.sh  
 $source /opt/xilinx/xrt/$VERSION/setup.sh  
