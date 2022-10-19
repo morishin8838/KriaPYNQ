@@ -32,7 +32,7 @@
 0. 下準備
     1. ビルド環境をダウンロードする
         * $wget https://github.com/Xilinx/DPU-PYNQ
-        * cd board
+        * $cd board
     2. 評価ボード(ZCU104,Ultra96,KV260)を使う場合、このままでよい
     3. カスタムボードを使う場合、適当なディレクトリを作成する。
         * 作成したディレクトリにdpu_conf.vh,prj_configを配置する。仕様が似ている評価ボードの設定ファイルをコピーすること
