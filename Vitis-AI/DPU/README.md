@@ -59,3 +59,6 @@ $source /tools/Xilinx/Vitis/$VERSION/settings64.sh
 $source /opt/xilinx/xrt/$VERSION/setup.sh  
 $make clean  
 $make BOARD=NKV VITIS_PLATFORM=<path xpfm>/xxxxx.xpfm  
+
+* CPUパワーにもよりますが、ビルドは3時間コースです。
+
