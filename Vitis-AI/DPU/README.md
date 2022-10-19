@@ -1,7 +1,7 @@
 # DPU-IP 組込み手順
 * HDMI-IPを組み込んだ場合になります。組み込まない場合、チュートリアル通りで組込み可能です。
 
-## 回路設計
+## 回路設計 Vivado
 1. Xilinx HDMI-IPがあるK26 FPGAカスタム回路設計を行う
 2. Clock追加
     * 200MHz,400MHz出力と、それぞれ200M用、400M用のSysReset追加する
@@ -21,10 +21,11 @@
 4. bitstream生成
 5. xsaファイルをエクスポート生成
 
-## プラットフォーム作成
-1. vitis起動し、メニューからプラットフォーム選択
+## プラットフォーム作成 Vitis
+1. vitis起動し、メニューからプラットフォーム選択し、プラットフォームを生成する。
 2. エクスポートしたxsaファイルを選択し、linuxを選択し、bootはチェック外す。ワーニングは無視して、終了
 3. トンカチボタンでbuildする。
+4. exportディレクトリ配下にあるxpfmファイルのパスを確認する。下記、VITIS_PLATFORMのパスに指定する
 
 ## ビルド
 1. 設定ファイル編集
@@ -49,4 +50,3 @@ $source /tools/Xilinx/Vitis/$VERSION/settings64.sh
 $source /opt/xilinx/xrt/$VERSION/setup.sh  
 $make clean  
 $make BOARD=NKV VITIS_PLATFORM=<path xpfm>/xxxxx.xpfm  
-
