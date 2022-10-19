@@ -1,10 +1,11 @@
 # DPU-IP 組込み手順
+* HDMI-IPを組み込んだ場合になります。組み込まない場合、チュートリアル通りで組込み可能です。
 
 ## 回路設計
-1. 通常のFPGA回路設計を行う
+1. Xilinx HDMI-IPがあるK26 FPGAカスタム回路設計を行う
 2. Clock追加
-    * 300M,600M
-    * 300M用、600M用のSysReset追加
+    * 200MHz,400MHz出力と、それぞれ200M用、400M用のSysReset追加する
+    * 私の場合、300/600MHzはどう試行錯誤しても、TimingErrorが発生し、300/600のクロックラインは搭載できませんでした。
 3. plartform設定
     * AXI port
         * M_HPM0_FPD:HPM1
