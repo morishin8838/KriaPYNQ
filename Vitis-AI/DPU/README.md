@@ -5,8 +5,8 @@
 ## 回路設計 Vivado
 1. Xilinx HDMI-IPがあるK26 FPGAカスタム回路設計を行う
 2. Clock追加
-    * 200MHz,400MHz出力と、それぞれ200M用、400M用のSysReset追加する
-    * 私の場合、300/600MHzはどう試行錯誤しても、TimingErrorが発生し、300/600のクロックラインは搭載できませんでした。
+    * 300MHz,600MHz出力と、それぞれ300M用、600M用のSysReset追加する
+    * TimingErrorが発生した場合、connectvityを工夫すると、タイミングエラーが解消します。
 3. plartform設定
     * AXI port
         * M_HPM0_FPD:HPM1
@@ -39,9 +39,9 @@
         * dpu_conf.vh,prj_configの編集内容は、設定ファイル編集を参照する。
 1. 設定ファイル編集
     1. dpu_conf.vh編集
-        * `define B3136
-        * `define def_UBANK_IMG_N          4
-        * `define def_UBANK_WGT_N          15
+        * `define B4096
+        * `define def_UBANK_IMG_N          5
+        * `define def_UBANK_WGT_N          17
         * `define def_UBANK_BIAS           1
     2. prj_config
         * freqHz=200000000:DPUCZDX8G_1.aclk
@@ -62,3 +62,5 @@ $make BOARD=NKV VITIS_PLATFORM=<path xpfm>/xxxxx.xpfm
 
 * CPUパワーにもよりますが、ビルドは3時間コースです。
 
+## 注意事項
+* B3136でクロック200/400Mhzで設定すると、Timingエラーは解消できますが、推論エンジンを実行するとDPUはクラッシュします。
