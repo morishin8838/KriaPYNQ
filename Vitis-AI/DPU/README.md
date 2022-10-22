@@ -11,9 +11,9 @@
     * AXI port
         * M_HPM0_FPD:HPM1
         * M_HPM1_FPD:MLPD
-        * S_HPC0_FPD:HPC0
-        * S_HPC1_FPD:HPC1
-        * S_HP0_FPD:HP1
+        * S_HPC0_FPD:HP1
+        * S_HPC1_FPD:HP1
+        * S_HP0_FPD:HPC1
     * Clock
         * pl_clk0:Enabledチェック, is Defaultチェック
         * clk_out1:Enabledチェック、id=2
