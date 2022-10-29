@@ -22,8 +22,8 @@
  Update Boot Binary Toolは 192.168.0.111 の静的 IP アドレスで構成されている
    * Host PCを以下の通りにセッティングする。
       * IPv4 address: 192.168.0.x (anything from 2 - 255, but not 111)
-    * Subnet mask: 255.255.255.0
-    * Gateway/router: 192.168.0.1
+      * Subnet mask: 255.255.255.0
+      * Gateway/router: 192.168.0.1
 3. KV260にシリアルケーブルを接続する。    
 4. Host PCのネットワーク設定が完了したら、KV260のFWUEN (SW1) ボタンを押したまま 電源を入れる。
   * Kria がリカバリ モードで起動する。
