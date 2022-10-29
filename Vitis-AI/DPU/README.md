@@ -1,17 +1,18 @@
 # HDMI-IPを組み込んだDPU-PYNQプラットフォームの組込み手順
 * Xilinx HDMI-IPを組み込んだ回路にDPU-PYNQを組み込む場合の手順です。
-* HDMI-IPを組み込まない場合、本手順である必要はなさそうです。
+* HDMI-IPを組み込まない場合等、リソースに余裕がある場合、本手順にする必要はなし
 
+## 注意事項
+* ここでは、DPUサイズはB3136を用います。 Vitis-AIで配布される推論ファイルはB4096サイズです。
+* B3136サイズの回路で、B4096の推論ファイルを用いるとクラッシュします。注意してください。私はこの問題が気が付かず、１ヶ月悩みました。
 ## 回路設計 Vivado
 1. Xilinx HDMI-IPがあるK26 FPGAカスタム回路設計を行う
 2. Clock追加
-    * 300MHz,600MHz出力と、それぞれ300M用、600M用のSysReset追加する
-    * TimingErrorが発生した場合、connectvityを工夫すると、タイミングエラーが解消します。
+    * 200MHz,400MHz出力と、それぞれ200M用、400M用のSysReset追加する。
+    * 300MHz,600MHz設定のメイクでTimingErrorが発生した場合、200M/400Mに落としても良い。
 3. plartform設定
     * AXI port
-        * M_HPM0_FPD:HPM1
         * M_HPM1_FPD:MLPD
-        * S_HPC0_FPD:HP1
         * S_HPC1_FPD:HP1
         * S_HP0_FPD:HPC1
     * Clock
@@ -39,18 +40,18 @@
         * dpu_conf.vh,prj_configの編集内容は、設定ファイル編集を参照する。
 1. 設定ファイル編集
     1. dpu_conf.vh編集
-        * `define B4096
-        * `define def_UBANK_IMG_N          5
-        * `define def_UBANK_WGT_N          17
+        * `define B3136
+        * `define def_UBANK_IMG_N          4
+        * `define def_UBANK_WGT_N          15
         * `define def_UBANK_BIAS           1
     2. prj_config
         * freqHz=200000000:DPUCZDX8G_1.aclk
         * freqHz=400000000:DPUCZDX8G_1.ap_clk_2
         * id=2:DPUCZDX8G_1.aclk
         * id=4:DPUCZDX8G_1.ap_clk_2
-        * sp=DPUCZDX8G_1.M_AXI_GP0:HP1
-        * sp=DPUCZDX8G_1.M_AXI_HP0:HPC0
-        * sp=DPUCZDX8G_1.M_AXI_HP2:HPC1
+        * sp=DPUCZDX8G_1.M_AXI_GP0:HPC1
+        * sp=DPUCZDX8G_1.M_AXI_HP0:HP1
+        * sp=DPUCZDX8G_1.M_AXI_HP2:HP1
         * prop=run.impl_1.strategy=Performance_Explore
     
 2. ビルド実行  
@@ -61,6 +62,3 @@ $make clean
 $make BOARD=NKV VITIS_PLATFORM=<path xpfm>/xxxxx.xpfm  
 
 * CPUパワーにもよりますが、ビルドは3時間コースです。
-
-## 注意事項
-* B3136でクロック200/400Mhzで設定すると、Timingエラーは解消できますが、推論エンジンを実行するとDPUはクラッシュします。
