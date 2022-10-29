@@ -71,5 +71,6 @@ $make BOARD=NKV VITIS_PLATFORM=<path xpfm>/xxxxx.xpfm
 1. bitファイルを再度に生成したい場合、ビルドしたVivadoプロジェクトをVivadoを用いて、設定変更し再bitstream生成することが可能
    * <Make用 PATH>/boards/NKV/binary_container_1/link/vivado/vpl/prj/prj.xpr
 2. HDMI-IP利用の際、"Channel primitive pin location constraints"がビルド際に原因不明で指定値に制御できないため、手動で再bitstream生成で対応した。
+   * Vivadoからprj.xprを開き、synthesis実行後、IOプラニングからY2<=>T2を逆にし、手動でimpl,bitstream生成を行う。
    * #set_property package_pin Y2 [get_ports gthrxp_in[2]]
    * #set_property package_pin T2 [get_ports gthrxp_in[0]]
