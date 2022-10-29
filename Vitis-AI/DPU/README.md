@@ -14,8 +14,8 @@
 3. plartform設定
     * AXI port
         * M_HPM1_FPD:MLPD
-        * S_HPC1_FPD:HP1
-        * S_HP0_FPD:HPC1
+        * S_HPC1_FPD:HPC1
+        * S_HP1_FPD:HP1
     * Clock
         * pl_clk0:Enabledチェック, is Defaultチェック
         * clk_out1:100MHz Enabledチェック、id=任意
