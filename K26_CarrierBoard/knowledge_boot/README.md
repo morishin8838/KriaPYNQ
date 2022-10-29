@@ -12,9 +12,9 @@
 2. VitisでXSAからプラットフォームを作成する。
    *	file->platform project ->名前任意 -> K26用に作ったxsaを指定 -> operation system =>Linux -> psu_cortexa53 -> 64bit -> 終了(ワーニング無視)
    *	GeneratebootComponent->チェックを外す -> Pre-buildCompornet
-         * FSBL : <PATH>/zynqmp_fsbl.elf
-		   * PMU Firmware : <PATH>/pmufw.elf
-         * Boot Components Directory : ./xilinx-k26-starterkit-2021.1/pre-built/linux/images
+   	* FSBL : <PATH>/zynqmp_fsbl.elf
+	* PMU Firmware : <PATH>/pmufw.elf
+	* Boot Components Directory : ./xilinx-k26-starterkit-2021.1/pre-built/linux/images
 4. プラットフォームを用いて、アプリーションプロジェクトを作成する。
    * file->application project -> 前のpfm -> 任意の名前 -> そのまま次 -> LinuxHelloWorldを指定 -> Finish    
 6. KV260に書き込む対象のK26を差し込む。シリアルケーブルを接続し、電源を投入する。
