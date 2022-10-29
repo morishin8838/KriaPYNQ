@@ -9,7 +9,7 @@
 1. Xilinx HDMI-IPがあるK26 FPGAカスタム回路設計を行う
 2. Clock追加
     * 200MHz,400MHz出力と、それぞれ200M用、400M用のSysReset追加する。
-    * 300MHz,600MHz設定のメイクでTimingErrorが発生した場合、200M/400Mに落としても良い。
+    * 300MHz,600MHz設定のメイクして、TimingErrorが発生した場合のみ200M/400Mに落とす手順でもよい（プラットフォームクロック再設定忘れずに）
 3. plartform設定
     * AXI port
         * M_HPM1_FPD:MLPD
@@ -17,8 +17,10 @@
         * S_HP0_FPD:HPC1
     * Clock
         * pl_clk0:Enabledチェック, is Defaultチェック
-        * clk_out1:Enabledチェック、id=2
-        * clk_out1:Enabledチェック、id=4     
+        * clk_out1:100MHz Enabledチェック、id=任意
+        * clk_out2:200MHz Enabledチェック、id=2
+        * clk_out3:300MHz Enabledチェック、id=任意
+        * clk_out4:400MHz Enabledチェック、id=4     
         
 4. bitstream生成
 5. xsaファイルをエクスポート生成
