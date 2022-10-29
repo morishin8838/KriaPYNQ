@@ -19,7 +19,7 @@
 1. 最新のブートbinを見つけます。
   * https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/1641152513/Kria+K26+SOM
 2. KV260にK26を差し込み をイーサネット経由でホスト PC に直接接続し、ネットワーク接続を構成する
-  * Update Boot Binary Toolは 192.168.0.111 の静的 IP アドレスで構成されている
+ Update Boot Binary Toolは 192.168.0.111 の静的 IP アドレスで構成されている
   * Host PCを以下の通りにセッティングする。
     * IPv4 address: 192.168.0.x (anything from 2 - 255, but not 111)
     * Subnet mask: 255.255.255.0
