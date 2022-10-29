@@ -11,9 +11,10 @@
 1. Vivodoでハードウエア設計を行い、XSAファイルを用意する。なんでも良い
 2. VitisでXSAからプラットフォームを作成する。
 3. プラットフォームを用いて、アプリーションプロジェクトを作成する。
-4. KV260に書き込む対象のK26を差し込む。シリアルケーブルを接続し、電源を投入する。
-5. アプリーションプロジェクトのメニューのProgram Flash Memoryを用いて、K26にboot.binを書き込む。"Success"が表示される。
-
+    * file->application project -> 前のpfm -> 任意の名前 -> そのまま次 -> LinuxHelloWorldを指定 -> Finish    
+5. KV260に書き込む対象のK26を差し込む。シリアルケーブルを接続し、電源を投入する。
+6. アプリーションプロジェクトのメニューのProgram Flash Memoryを用いて、K26にboot.binを書き込む。"Success"が表示される。
+    * ImageFile : boot.binを指定 -> ofset：空欄 -> Flash Type:qspi-x4-single -> initfile は設定されているもの(fsbl.elf)をそのまま使う
 ## 概略2 Update Boot Binary Toolを使う方法
 * https://www.hackster.io/whitney-knitter/update-boot-binary-and-install-pynq-on-kria-kv260-03b7e9
 1. 最新のブートbinを見つけます。
