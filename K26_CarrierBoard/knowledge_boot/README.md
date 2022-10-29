@@ -17,11 +17,11 @@
 ## 概略2 Update Boot Binary Toolを使う方法
 * https://www.hackster.io/whitney-knitter/update-boot-binary-and-install-pynq-on-kria-kv260-03b7e9
 1. 最新のブートbinを見つけます。
-  * https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/1641152513/Kria+K26+SOM
+   * https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/1641152513/Kria+K26+SOM
 2. KV260にK26を差し込み をイーサネット経由でホスト PC に直接接続し、ネットワーク接続を構成する
  Update Boot Binary Toolは 192.168.0.111 の静的 IP アドレスで構成されている
-  * Host PCを以下の通りにセッティングする。
-    * IPv4 address: 192.168.0.x (anything from 2 - 255, but not 111)
+   * Host PCを以下の通りにセッティングする。
+      * IPv4 address: 192.168.0.x (anything from 2 - 255, but not 111)
     * Subnet mask: 255.255.255.0
     * Gateway/router: 192.168.0.1
 3. KV260にシリアルケーブルを接続する。    
