@@ -41,7 +41,7 @@
     3. カスタムボードを使う場合、適当なディレクトリを作成する。
         * 作成したディレクトリにdpu_conf.vh,prj_configを配置する。仕様が似ている評価ボードの設定ファイルをコピーすること
         * dpu_conf.vh,prj_configの編集内容は、設定ファイル編集を参照する。
-1. 設定ファイル編集
+1. 設定ファイル編集 <メイクroot>/boards/ボード名/dpu_conf.vh
     1. dpu_conf.vh編集
         * `define B3136
         * `define def_UBANK_IMG_N          4
