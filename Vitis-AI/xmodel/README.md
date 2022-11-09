@@ -3,7 +3,7 @@
 * 手順
     1. DPU-PYNQのboardsのmakeから、bitstream,hwhを生成する。
     2. hwhを取得し、 dcfファイルを生成させる
-        * vitis-aiを起動し、以下のコマンドを実行
+        * vitis-aiを起動し、conda activate vitis-ai-tensorflow後、以下のコマンドを実行
         * $ dlet -f ./***.hwh
         * 例：dpu-06-07-2021-19-15.dcfが生成されたとする。
 
@@ -15,4 +15,4 @@
             "cpu_arch" : "arm64"  
         }
 
-    5.完了
+* 完了
