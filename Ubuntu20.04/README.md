@@ -59,7 +59,10 @@
             $cd /etc
             $sudo nano vart.conf
             firmware: /usr/lib/dpu.xclbin 
-            を記載する。            
+            を記載する。            ## クロスコンパイラインストール
+* Ubuntu20.04ホストで運用していると、稀に消失。なぜだろう。その時入れなおし。
+* $ sudo apt-get install qemu
+* $ sudo apt-get install g++-aarch64-linux-gnu
         2 Jupyter起動
             192.168.1.82:9090 これnotebook
             192.168.1.82:9090/lab
@@ -90,7 +93,10 @@
         * 壁紙変更等を行う
     4. アップグレード 
 ```
-        $sudo apt update 
+        $sudo apt update ## クロスコンパイラインストール
+* Ubuntu20.04ホストで運用していると、稀に消失。なぜだろう。その時入れなおし。
+* $ sudo apt-get install qemu
+* $ sudo apt-get install g++-aarch64-linux-gnu
         $sudo apt upgrade
 ```
         The following packages have unmet dependencies:
@@ -100,7 +106,10 @@
     5. FTPサーバ設定
         $sudo apt -y install vsftpd  
         $sudo nano /etc/vstfpd.conf
-        	※以下コメントアウトを削除する（有効化する）
+        	※以下コメントアウトを削除する（有効化する）## クロスコンパイラインストール
+* Ubuntu20.04ホストで運用していると、稀に消失。なぜだろう。その時入れなおし。
+* $ sudo apt-get install qemu
+* $ sudo apt-get install g++-aarch64-linux-gnu
 		    ・write_enable=YES
 		    ・ascii_upload_enable=YES
 		    ・ascii_download_enable=YES
@@ -179,8 +188,3 @@
 	    設定を適用する。IPアドレスを設定した後に、再度IPアドレスを確認してみます。
         $ifconfig
 
-
-## クロスコンパイラインストール
-* Ubuntu20.04ホストで運用していると、稀に消失。なぜだろう。その時入れなおし。
-* $ sudo apt-get install qemu
-* $ sudo apt-get install g++-aarch64-linux-gnu
