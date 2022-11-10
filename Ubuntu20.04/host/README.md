@@ -62,3 +62,11 @@
 
     $geany &
     で geany が起動した。
+    
+       
+    
+## クロスコンパイラインストール
+* Ubuntu20.04ホストで運用していると、稀に消失。なぜだろう。その時入れなおし。
+* $ sudo apt-get install qemu
+* $ sudo apt-get install g++-aarch64-linux-gnu
+    
