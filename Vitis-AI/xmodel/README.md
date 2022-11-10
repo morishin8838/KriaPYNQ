@@ -3,6 +3,8 @@
 * Vitis-AIコマンド "vai_c_tensorflow"の引数で指定するjsonファイルを作成する
 * 手順
     1. DPU-PYNQのboardsのmakeから、bitstream,hwhを生成する。
+        * 手順はこちら
+        * https://github.com/morishin8838/KriaPYNQ-Ubuntu/tree/main/Vitis-AI/DPU
     2. hwhを取得し、 dcfファイルを生成させる
         * vitis-aiを起動し、conda activate vitis-ai-tensorflow後、以下のコマンドを実行
         * $ dlet -f ./***.hwh
