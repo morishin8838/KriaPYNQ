@@ -1,4 +1,5 @@
 # vai_c_tensorflow用 jsonファイル生成方法
+* Vitis-AIのコンパイルで使うarch(jsonファイル)の生成方法に関する説明
 * Vitis-AIコマンド "vai_c_tensorflow"の引数で指定するjsonファイルを作成する
 * 手順
     1. DPU-PYNQのboardsのmakeから、bitstream,hwhを生成する。
