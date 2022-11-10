@@ -2,7 +2,7 @@
 
 ## Tensorflowを用いて、学習モデルを作成する
 
-## FPGA用推論モデルを作成する
+## TensorflowからFPGA用推論モデルを作成する
 * チュートリアルはこちら
 * https://github.com/Xilinx/Vitis-AI-Tutorials
 
