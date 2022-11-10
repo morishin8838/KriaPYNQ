@@ -179,3 +179,8 @@
 	    設定を適用する。IPアドレスを設定した後に、再度IPアドレスを確認してみます。
         $ifconfig
 
+
+## クロスコンパイラインストール
+* Ubuntu20.04ホストで運用していると、稀に消失。なぜだろう。その時入れなおし。
+* $ sudo apt-get install qemu
+* $ sudo apt-get install g++-aarch64-linux-gnu
