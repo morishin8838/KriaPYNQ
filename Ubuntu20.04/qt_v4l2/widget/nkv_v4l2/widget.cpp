@@ -4,6 +4,7 @@
 
 QLabel *imagelabel = NULL;
 QLabel *fps__label = NULL;
+QLabel *unit_label = NULL;
 
 extern QThread *ImageThread;    /** カメラ データ スレッドを取得する */
 
@@ -14,6 +15,10 @@ Widget::Widget(QWidget *parent) :
     ui->setupUi(this);
     imagelabel = ui->label;        /** インターフェイス上でラベルオブジェクトを取得し、「カメラデータ取得スレッド」で取得した画像データをこのラベルに表示できるようにします */
     fps__label = ui->label_3;
+    unit_label = ui->label_2;
+
+    fps__label->setStyleSheet("QLabel {color: #518a87;}");
+    unit_label->setStyleSheet("QLabel {color: #518a87;}");
 }
 
 Widget::~Widget()

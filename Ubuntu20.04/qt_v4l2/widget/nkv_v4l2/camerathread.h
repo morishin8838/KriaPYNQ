@@ -6,6 +6,7 @@
 #include <QImage>
 #include "widget.h"
 #include "ui_widget.h"
+#include "opencv2/opencv.hpp"
 
 class CameraThread : public QObject
 {
