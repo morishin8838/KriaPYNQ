@@ -4,8 +4,8 @@
 * https://qiita.com/ikwzm/items/a9a8d1946fa5899742bd
 
 ## カスタムKria-SOM(K26)のブートファームウェア更新手順
-* https://github.com/Xilinx/Xilinx_Kria_KV260_Workshop/blob/main/Enable%20Boot%20for%20SD%20card.md
 * https://qiita.com/ikwzm/items/4e5e954eabc988bd78d5
+* https://github.com/Xilinx/Xilinx_Kria_KV260_Workshop/blob/main/Enable%20Boot%20for%20SD%20card.md
 
 ## 概略1 Vitis を使う方法
 1. Vivodoでハードウエア設計を行い、XSAファイルを用意する。なんでも良い
